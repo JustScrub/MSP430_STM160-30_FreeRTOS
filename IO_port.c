@@ -69,6 +69,7 @@ void IO_port_init(void) {
     UCA0MCTLW |= UCOS16 | UCBRF_5 | 0x5500;
     UCA0CTLW0 &= ~UCSWRST;                  // Initialize eUSCI
 
+#if EXAMPLE_TASKS
     /* output MCLK and SMCLK */
     P5DIR |= MCLK_PIN;
     P5SEL0 |= MCLK_PIN;
@@ -79,8 +80,9 @@ void IO_port_init(void) {
 
     TRACE_DIR |= TRACE_1_PIN ;
     TRACE_DIR |= TRACE_2_PIN ;
-
+#endif
 }
+
 #if LED_G_INTERRUPT
 #pragma vector=PORT5_VECTOR
 __interrupt void p5vect(void) {

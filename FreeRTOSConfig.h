@@ -49,7 +49,7 @@
 #define configTICK_RATE_HZ			( ( TickType_t ) 100 )          /* 100 Hz */
 #define configMAX_PRIORITIES		( 5 )                           /* 0 ... 4, 4 = the highest */
 #define configMINIMAL_STACK_SIZE	( ( unsigned short ) 50 )
-#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 1800 ) )
+#define configTOTAL_HEAP_SIZE		( ( size_t ) ( 3000 ) )  //1800 before
 #define configMAX_TASK_NAME_LEN		( 8 )
 #define configUSE_TRACE_FACILITY	0
 #define configUSE_16_BIT_TICKS		1

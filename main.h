@@ -21,6 +21,9 @@ void task_2_fn(void *pvParameters) ;
 
 void task_3_fn(void *pvParameters) ;
 
+void uart_write_char(char c);
+void uart_write_string(char *s);
+void task_stm160_fn(void *pvParameters);
 void task_uart_fn(void *pvParameters);
 
 void timer_1_callback(TimerHandle_t tmr) ;

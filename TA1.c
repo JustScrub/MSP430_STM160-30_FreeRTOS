@@ -45,7 +45,9 @@ void TA1_init(void) {
     TA1CCR0 = TA1_INT_PERIOD;   /* = 10 ms @ 8 MHz + :8 prescaler :8 IDEX */
     TA1EX0 = 0x0007;            /* :8 in IDEX prescaler */
     TA1CTL = 0x02D4;            /* SMCLK:8, up mode to CCR0, TAIE disable */
+    #if EXAMPLE_TASKS
     TA1CCTL0 = 0x0010;          /* compare interrupt enabled */
+    #endif
 
 }
 
